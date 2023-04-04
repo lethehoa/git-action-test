@@ -3,14 +3,15 @@ name: Actions Workflow
 on: [push]
 
 jobs:
-  run-github-actions:
+  run-github-actions-third:
     runs-on: ubuntu-latest
     steps:
       - name: List Files
         run: |
           pwd
           ls
-          git clone https://github.com/lethehoa/git-action-test.git
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: List Files second time
         run: |
           pwd

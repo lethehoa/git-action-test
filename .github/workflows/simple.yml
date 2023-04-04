@@ -3,7 +3,7 @@ name: Shell Commands
 on: [push]
 
 jobs:
-  run-shell-command:
+  run-shell-command-first:
     runs-on: ubuntu-22.04
     steps:
       - name: echo a string
