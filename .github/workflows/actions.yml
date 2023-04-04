@@ -13,8 +13,8 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
-          git clone git@github.com:$GITHUB_REPOSITORY
-          git checkout $GITHUB_SHA
+      #    git clone git@github.com:$GITHUB_REPOSITORY
+      #    git checkout $GITHUB_SHA
       # - name: List Files
       #   run: |
       #     pwd
