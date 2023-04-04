@@ -10,7 +10,7 @@ jobs:
         run: |
           pwd
           ls
-          git clone lethehoa/git-action-test
+          git clone https://github.com/lethehoa/git-action-test.git
       - name: List Files second time
         run: |
           pwd
