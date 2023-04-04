@@ -6,16 +6,20 @@ jobs:
   run-github-actions-third:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files
+      - name: List Env
         run: |
           pwd
           ls -a
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: List Files second time
-        run: |
-          pwd
-          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          git clone git@github.com:$GITHUB_REPOSITORY
+      # - name: List Files
+      #   run: |
+      #     pwd
+      #     ls
+      # - name: Checkout
+      #   uses: actions/checkout@v1
       - name: Simple Js Action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
