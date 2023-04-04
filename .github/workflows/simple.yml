@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: create a folders
-        run: mdkir -p ./test/folder
+        run: mkdir -p ./test/folder
       - name: final
         run: |
           echo "Hello world" > ./test/folder/hoa.le.txt
