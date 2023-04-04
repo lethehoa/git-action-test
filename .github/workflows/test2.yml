@@ -1,0 +1,14 @@
+name: This is for running Shell
+
+on: [push]
+
+
+jobs:
+  run-second-shell:
+    runs-on: windows-latest
+    steps:
+      - name: Get location
+        run: dir
+      - name: Get second location
+        run: pwd
+        shell: bash
