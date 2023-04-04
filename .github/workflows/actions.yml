@@ -10,7 +10,11 @@ jobs:
         run: |
           pwd
           ls
-          
+          git clone lethehoa/git-action-test
+      - name: List Files second time
+        run: |
+          pwd
+          ls
       - name: Simple Js Action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
