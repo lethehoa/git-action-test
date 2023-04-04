@@ -14,7 +14,7 @@ jobs:
       - name: List Files second time
         run: |
           pwd
-          ls
+          ls git-action-test
       - name: Simple Js Action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
