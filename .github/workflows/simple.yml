@@ -13,3 +13,13 @@ jobs:
           node -v
           npm -v
           mysql --version
+  run-another-shell-command:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: create a folders
+        run: mdkir -p ./test/folder
+      - name: final
+        run: |
+          echo "Hello world" > ./test/folder/hoa.le.txt
+          cat ./test/folder/hoa.le.txt
+
