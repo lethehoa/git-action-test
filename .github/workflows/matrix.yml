@@ -4,12 +4,30 @@ on: [push]
 
 jobs:
   node-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Log node version
-        run: node -v
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 6
-      - name: Log node version
-        run: node -v
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: Log node version
+    #     run: node -v
+    #   - uses: actions/setup-node@v3
+    #     with:
+    #       node-version: 6
+    #   - name: Log node version
+    #     run: node -v
+
+      strategy:
+        fail-fast: true
+        matrix:
+          os: [macos-latest, ubuntu-latest]
+          
+          node_version: [6, 8, 15]
+
+      runs-on: ${{ matrix.os }}
+
+      steps:
+        - name: Log node version
+          run: node -v
+        - uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.node_version}}
+        - name: Log node version
+          run: node -v
