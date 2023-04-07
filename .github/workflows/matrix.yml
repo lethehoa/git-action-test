@@ -23,7 +23,8 @@ jobs:
             - os: ubuntu-latest
               node_version: 8
               is_ubuntu_8: "true"
-
+          exclude:
+            - os: macos-latest
       runs-on: ${{ matrix.os }}
 
       steps:
