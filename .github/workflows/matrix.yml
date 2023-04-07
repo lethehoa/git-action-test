@@ -25,7 +25,7 @@ jobs:
               is_ubuntu_8: "true"
           exclude:
             - os: macos-latest
-            - node_version: 8
+              node_version: 8
       runs-on: ${{ matrix.os }}
 
       steps:
