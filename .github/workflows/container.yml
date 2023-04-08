@@ -3,18 +3,27 @@ name: Container
 on: push
 
 jobs:
-  node-container-docker:
+  docker-steps:
     runs-on: ubuntu-latest
-    services:
-      app:
-        image: alialaa17/node-api
-        ports:
-          - 3001:3000
-      mongo:
-        image: mongo
-        ports:
-          - 27017:27017
-
+    container:
+      image: node:16-bullseye
     steps:
       - name: Log node version
-        run: "curl http://localhost:3001/api/users"
+        run: node -v
+
+# jobs:
+#   node-container-docker:
+#     runs-on: ubuntu-latest
+#     services:
+#       app:
+#         image: alialaa17/node-api
+#         ports:
+#           - 3001:3000
+#       mongo:
+#         image: mongo
+#         ports:
+#           - 27017:27017
+
+#     steps:
+#       - name: Log node version
+#         run: "curl http://localhost:3001/api/users"
