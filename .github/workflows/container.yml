@@ -15,7 +15,11 @@ jobs:
         with:
           entrypoint: 'node'
           args: '-v'
-
+      - name: Log node version 2
+        uses: docker://node:14-alpine3.16
+        with:
+          entrypoint: /usr/local/bin/node
+          args: -v
 # jobs:
 #   node-container-docker:
 #     runs-on: ubuntu-latest
